@@ -1,0 +1,16 @@
+<app-child [data]="numbers"></app-child>
+<button (click)="incrementNumber()">+</button>
+
+<input type="text" (keyup)="onKeyUp($event)" />
+
+<button (click)="OnChange()">Change content</button>
+
+<ng-container *ngIf="showcontent; else elseBlock">
+  <p>ng-container</p>
+</ng-container>
+
+<ng-template #elseBlock>
+  <p>Hello inside ng-container</p>
+</ng-template>
+
+<p *ngFor="let item of numbers">{{ item }}</p>
